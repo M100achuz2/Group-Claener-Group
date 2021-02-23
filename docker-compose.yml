@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  groupcleaner:
+    image: themulti0/groupcleaner
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: groupcleaner
+    restart: always
+    volumes:
+      - './config.ini:/app/config.ini'
